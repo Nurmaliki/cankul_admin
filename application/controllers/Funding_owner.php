@@ -27,6 +27,7 @@ class Funding_owner extends CI_Controller
 
         $funding_owner = $this->db
             ->from('funding_owner')
+            ->join('funding', 'funding.funding_owner_id=funding_owner.id')
             ->get()
             ->result();
         $data = [
