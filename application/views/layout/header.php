@@ -223,13 +223,13 @@
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
-                                    <i class="right fas fa-angle-left"></i>
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
                                 </p>
                             </a>
 
                         </li>
 
-                        <li class="nav-item <?= ($uri1 == 'funding_owner' || $uri2 == 'funder') ? 'menu-open' : '' ?> ">
+                        <li class="nav-item <?= ($uri1 == 'beneficiary' || $uri1 == 'funder') ? 'menu-open' : '' ?> ">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
@@ -239,11 +239,11 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="<?= base_url() ?>funding_owner" class="nav-link <?= $uri1 == 'funding_owner' ? 'active' : '' ?> ">
+                                    <a href="<?= base_url() ?>beneficiary" class="nav-link <?= $uri1 == 'beneficiary' ? 'active' : '' ?> ">
                                         <i class="nav-icon far fa-calendar-alt"></i>
                                         <p>
-                                            funding owner
-                                            <span class="badge badge-info right">2</span>
+                                            beneficiary
+                                            <!-- <span class="badge badge-info right">2</span> -->
                                         </p>
                                     </a>
                                 </li>
@@ -252,12 +252,46 @@
                                         <i class="nav-icon far fa-calendar-alt"></i>
                                         <p>
                                             funder
-                                            <span class="badge badge-info right">2</span>
+                                            <!-- <span class="badge badge-info right">2</span> -->
                                         </p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="nav-item menu-open">
+                            <a href="<?= base_url() ?>campaign" class="nav-link <?= $uri1 == 'campaign' ? 'active' : '' ?>  ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Campaign
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item menu-open">
+                            <a href="<?= base_url() ?>transaction" class="nav-link <?= $uri1 == 'transaction' ? 'active' : '' ?>  ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Transaction
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
+                                </p>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item menu-open">
+                            <a href="<?= base_url() ?>user" class="nav-link <?= $uri1 == 'user' ? 'active' : '' ?>  ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    User
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
+                                </p>
+                            </a>
+
+                        </li>
+
+
                         <!-- <li class="nav-header">MASTER</li> -->
 
 

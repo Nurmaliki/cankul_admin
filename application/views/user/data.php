@@ -16,25 +16,22 @@
                               <table id="example2" class="table table-bordered table-hover">
                                   <thead>
                                       <tr>
-                                          <th>name</th>
-                                          <th>description</th>
-                                          <th>return_percentage</th>
-                                          <th>date_start</th>
-                                          <th>date_end</th>
-                                          <th>Action</th>
+
+                                          <th>username</th>
+                                          <th>Role Name</th>
+                                          <th>Aksi</th>
+
+
                                       </tr>
                                   </thead>
                                   <tbody>
 
-                                      <?php foreach ($funding_owner as $key => $value) { ?>
+                                      <?php foreach ($user as $key => $value) { ?>
 
                                           <tr>
-                                              <td><?= $value->name ?></td>
-                                              <td><?= $value->description ?></td>
-                                              <td><?= $value->return_percentage ?></td>
-                                              <td><?= $value->date_start ?></td>
-                                              <td><?= $value->date_end ?></td>
-                                              <td><?= $value->date_end ?></td>
+                                              <td><?= $value->username ?></td>
+                                              <td><?= $value->role_name ?></td>
+                                              <td></td>
                                           </tr>
 
                                       <?php } ?>

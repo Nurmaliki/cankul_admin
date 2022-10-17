@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Funding_owner extends CI_Controller
+class User extends CI_Controller
 {
 
     /**
@@ -25,16 +25,19 @@ class Funding_owner extends CI_Controller
             redirect(base_url() . 'login');
         }
 
-        $funding_owner = $this->db
-            ->from('funding_owner')
-            ->join('funding', 'funding.funding_owner_id=funding_owner.id')
+        $user = $this->db
+            ->select('
+               *
+            ')
+            ->from('dashboard_user')
+            ->join('role', 'role.id=dashboard_user.role_id')
             ->get()
             ->result();
         $data = [
-            'funding_owner' => $funding_owner
+            'user' => $user
         ];
         $this->load->view('layout/header');
-        $this->load->view('funding_owner/data', $data);
+        $this->load->view('user/data', $data);
         $this->load->view('layout/footer');
     }
 }

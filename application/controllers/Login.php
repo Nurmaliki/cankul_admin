@@ -33,12 +33,15 @@ class Login extends CI_Controller
     {
         $p = (object) $_POST;
         $username = $p->username;
-        $pw = $p->password;
-        $data_user = $this->db->from('dashboard_user')->where('username', $username)->where('password', $pw)->get()->row();
+        $password = $p->password;
+        $data_user = $this->db->from('dashboard_user')
+            ->where('username', $username)
+            ->get()->row();
 
-        if ($data_user) {
 
-            $this->session->set_userdata('data',    $data_user);
+        if (password_verify($password, $data_user->password)) {
+
+            $this->session->set_userdata('data', $data_user);
             redirect(base_url() . 'dashboard');
         } else {
             $this->session->set_flashdata('message_login', 'Username atau Password salah ');
